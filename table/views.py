@@ -14,12 +14,17 @@ def home(request):
 		team.position = count
 		count += 1
 		team.save()
+
+
+	return render(request, 'table/home.html', {'teams': teams})
+
+def fixtures(request):
 	numWeeks = 1
-	games = fixtures(numWeeks)
+	games = getFixtures(numWeeks,0)
 	playingDates = games[0]
 	idDict = games[1]
 
-	return render(request, 'table/home.html', {'teams': teams, 'playingDates': playingDates, 'idDict' : idDict})
+	return render(request, 'table/games.html', {'playingDates': playingDates, 'idDict' : idDict})
 
 def club(request, pk):
 	club = Club.objects.get(id = pk)
@@ -94,8 +99,8 @@ def updateTable():
 		two.save()
 
 
-def fixtures(numWeeks):
-	startDate = datetime.date.today() -  datetime.timedelta(days = 1)
+def getFixtures(numWeeks,prevDays):
+	startDate = datetime.date.today() -  datetime.timedelta(days = prevDays )
 	endDate = startDate + datetime.timedelta(days = 6 * numWeeks)
 	playing = Game.objects.filter(gamedate__range = [startDate,endDate]).order_by('gamedate')
 	playingDates = {}
