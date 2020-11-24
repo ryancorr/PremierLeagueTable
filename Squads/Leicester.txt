@@ -1,0 +1,27 @@
+1 , GK,	Denmark,	Kasper Schmeichel	
+2	,DF,	England,	James Justin	
+3	,DF,	France, Wesley Fofana	
+4	,DF,	Turkey ,Çağlar Söyüncü	
+5	,DF	,Jamaica ,Wes Morgan
+6	,DF	,Northern Ireland, Jonny Evans	
+7	,MF	,England ,Demarai Gray	
+8	,MF	,Belgium ,Youri Tielemans	
+9	,FW	,England ,Jamie Vardy
+10	,MF	,England ,James Maddison	
+11	,MF	,England ,Marc Albrighton	
+12	,GK	,Wales ,Danny Ward	
+13	,FW	,Algeria ,Islam Slimani	
+14	,FW	,Nigeria ,Kelechi Iheanacho
+15	,MF	,England, Harvey Barnes	
+17	,FW	,Spain ,Ayoze Pérez	
+18	,DF	,Ghana, Daniel Amartey	
+19	,FW	,Turkey, Cengiz Ünder 
+20	,MF	,England, Hamza Choudhury	
+21	,DF	,Portugal, Ricardo Pereira	
+24	,MF	,France, Nampalys Mendy	
+25	,MF,	Nigeria, Wilfred Ndidi	
+26	,MF	,Belgium, Dennis Praet	
+27	,DF	,Belgium, Timothy Castagne	
+28	,DF	,Austria, Christian Fuchs	
+33	,DF	,England, Luke Thomas	
+35	,GK	,Switzerland, Eldin Jakupović

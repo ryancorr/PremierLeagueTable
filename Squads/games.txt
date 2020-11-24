@@ -1,0 +1,340 @@
+#21 11
+Newcastle United v Chelsea 
+Aston Villa v Brighton and Hove Albion 
+Tottenham Hotspur v Manchester City 
+Manchester United v West Bromwich Albion   
+#22 11
+Fulham v Everton
+Sheffield United v West Ham United 
+Leeds United v Arsenal 
+Liverpool v Leicester City 
+#23 11
+Burnley v Crystal Palace 
+Wolverhampton Wanderers v Southampton 
+#27 11
+Crystal Palace v Newcastle United 
+#28 11
+Brighton and Hove Albion v Liverpool 
+Manchester City v Burnley 
+Everton v Leeds United 
+West Bromwich Albion v Sheffield United 
+#29 11
+Southampton v Manchester United 
+Chelsea v Tottenham Hotspur 
+Arsenal v Wolverhampton Wanderers 
+#30 11
+Leicester City v Fulham 
+West Ham United v Aston Villa 
+#05 12
+Aston Villa v Newcastle United
+Brighton and Hove Albion v Southampton
+Burnley v Everton
+Chelsea v Leeds United
+Liverpool v Wolverhampton Wanderers
+Manchester City v Fulham
+Sheffield United v Leicester City
+Tottenham Hotspur v Arsenal
+West Bromwich Albion v Crystal Palace
+West Ham United v Manchester United
+#12 12
+Arsenal v Burnley
+Crystal Palace v Tottenham Hotspur
+Everton v Chelsea
+Fulham v Liverpool
+Leeds United v West Ham United
+Leicester City v Brighton and Hove Albion 
+Manchester United v Manchester City
+Newcastle United v West Bromwich Albion 
+Southampton v Sheffield United
+Wolverhampton Wanderers v Aston Villa
+#15 12
+Arsenal v Southampton
+Aston Villa v Burnley
+Fulham v Brighton and Hove Albion 
+Leeds United v Newcastle United
+Leicester City v Everton
+Sheffield United v Manchester United
+West Ham United v Crystal Palace
+Wolverhampton Wanderers v Chelsea
+#16 12
+Liverpool v Tottenham Hotspur
+Manchester City v West Bromwich Albion 
+#19 12
+Brighton and Hove Albion v Sheffield United
+Burnley v Wolverhampton Wanderers
+Chelsea v West Ham United
+Crystal Palace v Liverpool
+Everton v Arsenal
+Manchester United v Leeds United
+Newcastle United v Fulham
+Southampton v Manchester City
+Tottenham Hotspur v Leicester City
+West Bromwich Albion v Aston Villa
+#26 12
+Arsenal v Chelsea
+Aston Villa v Crystal Palace
+Fulham v Southampton
+Leeds United v Burnley
+Leicester City v Manchester United
+Liverpool v West Bromwich Albion 
+Manchester City v Newcastle United
+Sheffield United v Everton
+West Ham United v Brighton and Hove Albion 
+Wolverhampton Wanderers v Tottenham Hotspur
+#28 12
+Brighton and Hove Albion v Arsenal
+Burnley v Sheffield United
+Chelsea v Aston Villa
+Crystal Palace v Leicester City
+Everton v Manchester City
+Manchester United v Wolverhampton Wanderers
+Newcastle United v Liverpool
+Southampton v West Ham United
+Tottenham Hotspur v Fulham
+West Bromwich Albion v Leeds United
+#02 01
+Brighton and Hove Albion v Wolverhampton Wanderers
+Burnley v Fulham
+Chelsea v Manchester City
+Crystal Palace v Sheffield United
+Everton v West Ham United
+Manchester United v Aston Villa
+Newcastle United v Leicester City
+Southampton v Liverpool
+Tottenham Hotspur v Leeds United
+West Bromwich Albion v Arsenal
+#12 01
+Arsenal v Crystal Palace
+Aston Villa v Tottenham Hotspur
+Fulham v Manchester United
+Leeds United v Southampton
+Leicester City v Chelsea
+Sheffield United v Newcastle United
+West Ham United v West Bromwich Albion 
+Wolverhampton Wanderers v Everton
+#13 01
+Liverpool v Burnley
+Manchester City v Brighton and Hove Albion 
+#16 01
+Arsenal v Newcastle United
+Aston Villa v Everton
+Fulham v Chelsea
+Leeds United v Brighton and Hove Albion
+Leicester City v Southampton
+Liverpool v Manchester United
+Manchester City v Crystal Palace
+Sheffield United v Tottenham Hotspur
+West Ham United v Burnley
+Wolverhampton Wanderers v West Bromwich Albion 
+#26 01
+Brighton and Hove Albion v Fulham
+Burnley v Aston Villa
+Everton v Leicester City
+Manchester United v Sheffield United
+West Bromwich Albion v Manchester City
+#27 01
+Chelsea v Wolverhampton Wanderers
+Newcastle United v Leeds United
+Southampton v Arsenal
+Tottenham Hotspur v Liverpool
+Crystal Palace v West Ham United
+#30 01
+Arsenal v Manchester United
+Brighton and Hove Albion v Tottenham Hotspur
+Chelsea v Burnley
+Crystal Palace v Wolverhampton Wanderers
+Everton v Newcastle United
+Leicester City v Leeds United
+Manchester City v Sheffield United
+Southampton v Aston Villa
+West Bromwich Albion v Fulham
+West Ham United v Liverpool
+#02 02 
+Aston Villa v West Ham United
+Burnley v Manchester City
+Fulham v Leicester City
+Leeds United v Everton
+Sheffield United v West Bromwich Albion 
+Wolverhampton Wanderers v Arsenal
+Manchester United v Southampton
+#03 02
+Newcastle United v Crystal Palace
+Tottenham Hotspur v Chelsea
+Liverpool v Brighton and Hove Albion 
+#06 02
+Aston Villa v Arsenal
+Burnley v Brighton and Hove Albion 
+Fulham v West Ham United
+Leeds United v Crystal Palace
+Liverpool v Manchester City
+Manchester United v Everton
+Newcastle United v Southampton
+Sheffield United v Chelsea
+Tottenham Hotspur v West Bromwich Albion 
+Wolverhampton Wanderers v Leicester City
+#13 02
+Arsenal v Leeds United
+Brighton and Hove Albion v Aston Villa
+Chelsea v Newcastle United
+Crystal Palace v Burnley
+Everton v Fulham
+Leicester City v Liverpool
+Manchester City v Tottenham Hotspur
+Southampton v Wolverhampton Wanderers
+West Bromwich Albion v Manchester United
+West Ham United v Sheffield United
+#20 02
+Arsenal v Manchester City
+Aston Villa v Leicester City
+Brighton and Hove Albion v Crystal Palace
+Burnley v West Bromwich Albion 
+Fulham v Sheffield United
+Liverpool v Everton
+Manchester United v Newcastle United
+Southampton v Chelsea
+West Ham United v Tottenham Hotspur
+Wolverhampton Wanderers v Leeds United
+#27 02
+Chelsea v Manchester United
+Crystal Palace v Fulham
+Everton v Southampton
+Leeds United v Aston Villa
+Leicester City v Arsenal
+Manchester City v West Ham United
+Newcastle United v Wolverhampton Wanderers
+Sheffield United v Liverpool
+Tottenham Hotspur v Burnley
+West Bromwich Albion v Brighton and Hove Albion 
+#06 03
+Aston Villa v Wolverhampton Wanderers
+Brighton and Hove Albion v Leicester City
+Burnley v Arsenal
+Chelsea v Everton
+Liverpool v Fulham
+Manchester City v Manchester United
+Sheffield United v Southampton
+Tottenham Hotspur v Crystal Palace
+West Bromwich Albion v Newcastle United
+West Ham United v Leeds United
+#13 03
+Arsenal v Tottenham Hotspur
+Crystal Palace v West Bromwich Albion 
+Everton v Burnley
+Fulham v Manchester City
+Leeds United v Chelsea
+Leicester City v Sheffield United
+Manchester United v West Ham United
+Newcastle United v Aston Villa
+Southampton v Brighton and Hove Albion 
+Wolverhampton Wanderers v Liverpool
+#20 03
+Brighton and Hove Albion v Newcastle United
+Burnley v Leicester City
+Crystal Palace v Manchester United
+Fulham v Leeds United
+Liverpool v Chelsea
+Manchester City v Wolverhampton Wanderers
+Sheffield United v Aston Villa
+Tottenham Hotspur v Southampton
+West Bromwich Albion v Everton
+West Ham United v Arsenal
+#03 04
+Arsenal v Liverpool
+Aston Villa v Fulham
+Chelsea v West Bromwich Albion 
+Everton v Crystal Palace
+Leeds United v Sheffield United
+Leicester City v Manchester City
+Manchester United v Brighton and Hove Albion 
+Newcastle United v Tottenham Hotspur
+Southampton v Burnley
+Wolverhampton Wanderers v West Ham United
+#10 04
+Brighton and Hove Albion v Everton
+Burnley v Newcastle United
+Crystal Palace v Chelsea
+Fulham v Wolverhampton Wanderers
+Liverpool v Aston Villa
+Manchester City v Leeds United
+Sheffield United v Arsenal
+Tottenham Hotspur v Manchester United
+West Bromwich Albion v Southampton
+West Ham United v Leicester City
+#17 04
+Arsenal v Fulham
+Aston Villa v Manchester City
+Chelsea v Brighton and Hove Albion 
+Everton v Tottenham Hotspur
+Leeds United v Liverpool
+Leicester City v West Bromwich Albion 
+Manchester United v Burnley
+Newcastle United v West Ham United
+Southampton v Crystal Palace
+Wolverhampton Wanderers v Sheffield United
+#24 04
+Arsenal v Everton
+Aston Villa v West Bromwich Albion 
+Fulham v Tottenham Hotspur
+Leeds United v Manchester United
+Leicester City v Crystal Palace
+Liverpool v Newcastle United
+Manchester City v Southampton
+Sheffield United v Brighton and Hove Albion 
+West Ham United v Chelsea
+Wolverhampton Wanderers v Burnley
+#01 05
+Brighton and Hove Albion v Leeds United
+Burnley v West Ham United
+Chelsea v Fulham
+Crystal Palace v Manchester City
+Everton v Aston Villa
+Manchester United v Liverpool
+Newcastle United v Arsenal
+Southampton v Leicester City
+Tottenham Hotspur v Sheffield United
+West Bromwich Albion v Wolverhampton Wanderers
+#08 05
+Arsenal v West Bromwich Albion 
+Aston Villa v Manchester United
+Fulham v Burnley
+Leeds United v Tottenham Hotspur
+Leicester City v Newcastle United
+Liverpool v Southampton
+Manchester City v Chelsea
+Sheffield United v Crystal Palace
+West Ham United v Everton
+Wolverhampton Wanderers v Brighton and Hove Albion 
+#11 05
+Brighton and Hove Albion v West Ham United
+Burnley v Leeds United
+Everton v Sheffield United
+Manchester United v Leicester City
+West Bromwich Albion v Liverpool
+#12 05
+Chelsea v Arsenal
+Newcastle United v Manchester City
+Southampton v Fulham
+Tottenham Hotspur v Wolverhampton Wanderers 
+Crystal Palace v Aston Villa
+#15 05
+Brighton and Hove Albion v Manchester City
+Burnley v Liverpool
+Chelsea v Leicester City
+Crystal Palace v Arsenal
+Everton v Wolverhampton Wanderers
+Manchester United v Fulham
+Newcastle United v Sheffield United
+Southampton v Leeds United
+Tottenham Hotspur v Aston Villa
+West Bromwich Albion v West Ham United
+#23 05
+Arsenal v Brighton and Hove Albion 
+Aston Villa v Chelsea
+Fulham v Newcastle United
+Leeds United v West Bromwich Albion 
+Leicester City v Tottenham Hotspur
+Liverpool v Crystal Palace
+Manchester City v Everton
+Sheffield United v Burnley
+West Ham United v Southampton
+Wolverhampton Wanderers v Manchester United
