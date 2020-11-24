@@ -1,0 +1,46 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prem Table</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<style>
+
+div{
+	justify-content: center;
+	text-align: center;
+ }
+
+.table{
+	
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+img{
+	width: 60px;
+	height: 60px;
+}
+
+</style>
+
+
+</head>
+<body>
+	<div>
+		<br>
+		<h1>Premier League Table</h1>
+	</div>
+	<br>
+	
+	{% include 'table/table.html' %} 
+	{% include 'table/games.html' %}
+</body>
+
+
+
+
+</html>
+

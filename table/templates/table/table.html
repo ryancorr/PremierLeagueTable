@@ -1,0 +1,48 @@
+{% load static %}
+
+<table class="table w-75">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Position</th>
+      <th scope="col">Club Name</th>
+      <th scope="col">Played</th>
+      <th scope="col">Won</th>
+      <th scope="col">Drawn</th>
+      <th scope="col">Lost</th>
+      <th scope="col">GF</th>
+      <th scope="col">GA</th>
+      <th scope="col">GD</th>
+      <th scope="col">Points</th>
+      <th scope="col">Form</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in teams %}
+      <tr>
+        <td>{{i.position}}</td>
+        <td> <a href = "{% url 'club' i.id %}"><img src ="{% get_static_prefix %}images/logos/{{ i.id }}.png"> <t>
+        <b>{{i.name}}</a></b></td>
+        <td>{{i.played}}</td>
+        <td>{{i.won}}</td>
+        <td>{{i.drawn}}</td>
+        <td>{{i.lost}}</td>
+        <td>{{i.gf}}</td>
+        <td>{{i.ga}}</td>
+        <td>{{i.gd}}</td>
+        <td>{{i.points}}</td>
+        <td>
+        {% for j in i.curForm%}
+          {% if j == "W" %}
+            <span class="badge badge-success">W</span>
+          {% elif j == "L" %}
+            <span class="badge badge-danger">L</span>
+          {% elif j == "D" %}
+            <span class="badge badge-secondary">D</span>
+          {% endif %} 
+        {% endfor %}
+        </td>
+      </tr>
+    {% endfor %}
+    <tr class = "blank_row"> <td bgcolor="#FFFFFF" colspan="11">&nbsp;</td></tr>
+  </tbody>
+</table>

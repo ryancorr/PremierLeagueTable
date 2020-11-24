@@ -1,0 +1,31 @@
+{% load static %}
+{% load get_item_one %}
+{% load get_item_two %}
+{% load get_items %}
+
+<h2 style="text-align: center;" >Upcoming Fixtures</h2><br>
+<table class="table" style="width: 40%">
+{% for i in playingDates %}
+	<thead class="thead-light">
+		<tr>
+			<th scope="col">{{i.weekday|get_day_of_week}} {{i}}</th>
+			<th scope="col"></th>
+		</tr>
+	</thead>
+	{% for j in playingDates|get_items:i %}
+	<tbody>
+		<tr>
+			<td style="text-align: right; padding:20px;" > <a href = "{% url 'club' idDict|get_item_one:j.id %}"> {{j.teamone.name}} <img src ="{% get_static_prefix %}images/logos/{{ idDict|get_item_one:j.id}}.png"></a>
+			{{j.teamonegoals}}
+			</td>
+			<td style="text-align: left; padding:20px;"> 
+			{{j.teamtwogoals}}
+			<a href = "{% url 'club' idDict|get_item_two:j.id %}"><img src ="{% get_static_prefix %}images/logos/{{idDict|get_item_two:j.id}}.png">  {{j.teamtwo.name}}</a></td>
+
+		</tr>
+		{% endfor %}
+		<tr class = "blank_row"> <td bgcolor="#FFFFFF" colspan="11">&nbsp;</td></tr>
+	</tbody>
+ {% endfor %}
+</table>
+
