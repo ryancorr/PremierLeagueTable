@@ -1,0 +1,66 @@
+
+<style>
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.scoreboard-outer {
+  display: flex;
+  width: 300px;
+  height: 40px;
+  top:50px;
+  left: 15%;
+  background-color: #53e2d4;
+}
+
+.team-name,
+.score {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.2em;
+  line-height: 40px; /*same as scoreboard-outers height*/
+  text-align: center;
+}
+
+.team-name {
+  flex: 1;
+  padding: 0px 8px;
+  color: white;
+  letter-spacing: 0.5px;
+  background-color: #311149;
+}
+
+.score-panel {
+  flex: 1.2;
+  font-weight: 900;
+  color: #44444;
+  text-align: center;
+}
+
+.team1::after {
+  content: " - ";
+}
+
+
+</style>
+
+
+
+<table class ='table w-75'>
+<tr>
+{% for i in playing %}
+	<th scope="col">
+		<div class="scoreboard-outer">
+			<span class="team-name one">{{i.teamone.abrev}}</span>
+			<div class="score-panel">
+				<span class="score team1">{{i.teamonegoals}}</span>
+				<span class="score team2">{{i.teamtwogoals}}</span>
+			</div>
+			<span class="team-name two">{{i.teamtwo.abrev}}</span>
+		</div>
+	</th>
+{% endfor %}
+</tr>
+</table>

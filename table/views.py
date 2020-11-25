@@ -8,15 +8,17 @@ import datetime
 # Create your views here.
 
 def home(request):
+
 	teams = Team.objects.all().order_by('-points','-gd','-gf')
 	count = 1
 	for team in teams:
 		team.position = count
 		count += 1
 		team.save()
+	startDate = datetime.date.today() -  datetime.timedelta(days = 3 )
+	playing = Game.objects.filter(gamedate__range = [startDate, datetime.date.today()]).order_by('-gamedate')[:6]
 
-
-	return render(request, 'table/home.html', {'teams': teams})
+	return render(request, 'table/home.html', {'teams': teams, 'playing': playing})
 
 def fixtures(request):
 	numWeeks = 1
@@ -36,9 +38,6 @@ def club(request, pk):
 	"Wales" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Wales_%281959%E2%80%93present%29.svg/100px-Flag_of_Wales_%281959%E2%80%93present%29.svg.png" , 
 	"Scotland": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Flag_of_Scotland.svg/100px-Flag_of_Scotland.svg.png" , 
 	"Northern Ireland": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ulster_Banner.svg/100px-Ulster_Banner.svg.png"}
-
-
-
 
 	return render(request, 'table/club.html', {'club': club, 'gk' : gk, 'df': df, 'mf': mf, "fw": fw, 'flags': flags})
 

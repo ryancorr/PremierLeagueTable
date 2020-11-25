@@ -3,6 +3,16 @@ from django.db import models
 # Create your models here.
 
 
+class Club(models.Model):
+	name = models.CharField(max_length = 50, null = True)
+	stadium = models.CharField(max_length = 50, null = True)
+	nickname = models.CharField(max_length = 50, null = True)
+	color = models.CharField(max_length = 50, null = True)
+
+	def __str__(self):
+		return self.name
+
+
 class Team(models.Model):
 	position = models.IntegerField(null = True)
 	name = models.CharField(max_length = 200, null = True)
@@ -15,19 +25,13 @@ class Team(models.Model):
 	gd = models.IntegerField()
 	points = models.IntegerField()
 	curForm = models.CharField(max_length = 200, null = True)
-	
+	club = models.ForeignKey(Club, on_delete = models.CASCADE, null = True)
+	abrev = models.CharField(max_length = 5, null = True)
 
+	
 	def __str__(self):
 		return self.name
 
-class Club(models.Model):
-	team = models.ForeignKey(Team, on_delete = models.CASCADE, null = True)
-	stadium = models.CharField(max_length = 50, null = True)
-	nickname = models.CharField(max_length = 50, null = True)
-	color = models.CharField(max_length = 50, null = True)
-
-	def __str__(self):
-		return self.team.name
 
 
 class Game(models.Model):
@@ -38,7 +42,7 @@ class Game(models.Model):
 	gamedate = models.DateField(null = True)
 
 	def __str__(self):
-		return self.teamone + " v " + self.teamtwo + " - " + self.gamedate.strftime("%m/%d/%Y")
+		return self.teamone.name + " v " + self.teamtwo.name + " - " + self.gamedate.strftime("%m/%d/%Y")
 
 
 class Player(models.Model):
