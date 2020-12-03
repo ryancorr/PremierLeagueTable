@@ -20,7 +20,7 @@
     {% for i in teams %}
       <tr>
         <td>{{i.position}}</td>
-        <td> <a href = "{% url 'club' i.id %}"><img src ="{% get_static_prefix %}images/logos/{{ i.id }}.png"> <t>
+        <td> <a href = "{% url 'club' i.id %}"><img src ="{% get_static_prefix %}images/logos/{{ i.id }}.png" style = "width: 60px; height: 60px"> <t>
         <b>{{i.name}}</a></b></td>
         <td>{{i.played}}</td>
         <td>{{i.won}}</td>

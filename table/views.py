@@ -30,6 +30,7 @@ def fixtures(request):
 
 def club(request, pk):
 	club = Club.objects.get(id = pk)
+	team = Team.objects.get(id = pk)
 	gk = Player.objects.filter(club_id = pk, position = 'GK').order_by('number')
 	df = Player.objects.filter(club_id = pk, position = 'DF').order_by('number')
 	mf = Player.objects.filter(club_id = pk, position = 'MF').order_by('number')
@@ -39,11 +40,22 @@ def club(request, pk):
 	"Scotland": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Flag_of_Scotland.svg/100px-Flag_of_Scotland.svg.png" , 
 	"Northern Ireland": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ulster_Banner.svg/100px-Ulster_Banner.svg.png"}
 
-	return render(request, 'table/club.html', {'club': club, 'gk' : gk, 'df': df, 'mf': mf, "fw": fw, 'flags': flags})
+	return render(request, 'table/club.html', {'club': club, 'team': team, 'gk' : gk, 'df': df, 'mf': mf, "fw": fw, 'flags': flags})
+
+
+
+def clubsView(request):
+	teams = Team.objects.all().order_by("name")
+
+	return render(request, 'table/clubList.html', {'teams': teams})
+
 
 
 def inputScores(request):
-	today = Game.objects.filter(gamedate = datetime.date.today())
+	startDate = datetime.date.today() -  datetime.timedelta(days = 5)
+	endDate = datetime.date.today()
+	today = Game.objects.filter(gamedate__range = [startDate, endDate])
+
 	if today.exists():
 		GameFormSet = modelformset_factory(Game, fields= ('teamone','teamtwo', 'teamonegoals', 'teamtwogoals', 'gamedate'), extra = 0)
 		if request.method == 'POST':
@@ -54,15 +66,15 @@ def inputScores(request):
 		else:	
 			formset = GameFormSet(queryset = today)
 
-		updateTable()
+		updateTable(startDate,endDate)
 		return render(request, 'table/inputscores.html', {'formset' : formset})
 	else:
 		return HttpResponse("<h1> No Games To Input Today <h1>")
 
-def updateTable():
-	today = Game.objects.filter(gamedate = datetime.date.today())
+def updateTable(startDate,endDate):
+	updates = Game.objects.filter(gamedate__range = [startDate, endDate])
 
-	for game in today:	
+	for game in updates:	
 		one = Team.objects.get(id = game.teamone.id)
 		two = Team.objects.get(id = game.teamtwo.id)
 		one.played = one.played + 1

@@ -3,7 +3,9 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	<title> {{club.team.name}} </title>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	<title> {{team.name}} </title>
 <style>
 
 .card bg-light .card-text {
@@ -29,14 +31,13 @@
 			<div class="card" style = "width: 18rm; background-color: {{club.color}};">
 				<img class="card-img-left" src="{% get_static_prefix %}images/logos/{{ club.id }}.png" style = "height = 200px; width: 200px; margin-top: 10px; margin-left: 10px;" >
 				<div class="card-body">
-					<h1 class="card-title" style = "color: white; -webkit-text-stroke: 1px black; ">{{club.team.name}} - {{club.nickname}} </h1> 
+					<h1 class="card-title" style = "color: white; -webkit-text-stroke: 1px black; ">{{team.name}} - {{club.nickname}} </h1> 
 				</div>
 			</div>
 			<div class="card card-body">
 				<table class="table">
 					<tr>
 						<th scope="col">Position</th>
-						<th scope="col">Club Name</th>
 						<th scope="col">Played</th>
 						<th scope="col">Won</th>
 						<th scope="col">Drawn</th>
@@ -48,18 +49,17 @@
 						<th scope="col">Form</th>
 					</tr>
 					<tr>
-						<td>{{club.team.position}}</td>
-						<td><b>{{club.team.name}}</b></td>
-						<td>{{club.team.played}}</td>
-						<td>{{club.team.won}}</td>
-						<td>{{club.team.drawn}}</td>
-						<td>{{club.team.lost}}</td>
-						<td>{{club.team.gf}}</td>
-						<td>{{club.team.ga}}</td>
-						<td>{{club.team.gd}}</td>
-						<td>{{club.team.points}}</td>
+						<td>{{team.position}}</td>
+						<td>{{team.played}}</td>
+						<td>{{team.won}}</td>
+						<td>{{team.drawn}}</td>
+						<td>{{team.lost}}</td>
+						<td>{{team.gf}}</td>
+						<td>{{team.ga}}</td>
+						<td>{{team.gd}}</td>
+						<td>{{team.points}}</td>
 						<td>
-							{% for j in club.team.curForm%}
+							{% for j in team.curForm%}
 							{% if j == "W" %}
 							<span class="badge badge-success">W</span>
 							{% elif j == "L" %}

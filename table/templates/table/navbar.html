@@ -1,25 +1,57 @@
 {% load static%}
 <style>
-nav {
-	justify-content: center;
-	text-align: center;
+
+#navcollapse {
+	position:absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+
+#navbar-brand{
+	height: 60px;
+}
+
+#nav{
+ 	text-align: center;
  }
+
+#logoimg{
+	height : 60px;
+	
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #311149; 
+}
+
+.navbar-custom { 
+    background-color: #e9ecef ; 
+} 
+
 </style>
 
 
 
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-	<a href="" class="navbar-brand">
+<nav class="navbar navbar-custom navbar-expand-lg" id = "nav" >
+		<a class="navbar-brand" id = "navbar-brand">
+			<img src = "https://www.fifplay.com/img/public/premier-league-logo.png" id = "logoimg">
+		</a>
+		<button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#navcollapse" >
+			&#9776;                     
+		</button>
+	</div>
 
-	</a>
 
-	<div class="collapse navbar-collapse" id="navbarCollapse">
+	<div class="collapse navbar-collapse"></div> 
+
+	<div class="collapse navbar-collapse" id="navcollapse">
 		<div class="navbar-nav">
-			<a href="{% url 'home' %}" class="nav-item nav-link "><h4>Table</h4></a>
-			<a href="{% url 'fixtures' %}" class="nav-item nav-link"><h4>Fixtures</h4></a>
-			<a href="" class="nav-item nav-link"><h4>Clubs</h4></a>
-			<a href="" class="nav-item nav-link"><h4>Players</h4></a>
+			<a href="{% url 'home' %}" class="nav-link "><h4>Table</h4></a>
+			<a href="{% url 'fixtures' %}" class="nav-link"><h4>Fixtures</h4></a>
+			<a href="{% url 'clubsView' %}" class="nav-link"><h4>Clubs</h4></a>
+			<a href="" class="nav-link"><h4>Players</h4></a>
 		</div>
 	</div>
 </nav>
