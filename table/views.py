@@ -121,7 +121,7 @@ def updateTable(startDate,endDate):
 
 def getFixtures():
 	startDate = datetime.date.today()
-	playing = Game.objects.filter(Q(gamedate__gt= startDate)).order_by('gamedate')
+	playing = Game.objects.filter(Q(gamedate__gte= startDate)).order_by('gamedate')
 	playingDates = {}
 	itrDate = playing.first().gamedate
 
