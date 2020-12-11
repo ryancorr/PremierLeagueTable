@@ -3,7 +3,10 @@ from django.http import HttpResponse
 from django.forms import modelformset_factory
 from .models import *
 from .forms import *
+from .filters import PlayerFilter
 import datetime
+from django.db.models import Q
+
 
 # Create your views here.
 
@@ -15,14 +18,13 @@ def home(request):
 		team.position = count
 		count += 1
 		team.save()
-	startDate = datetime.date.today() -  datetime.timedelta(days = 3 )
-	playing = Game.objects.filter(gamedate__range = [startDate, datetime.date.today()]).order_by('-gamedate')[:6]
+	startDate = datetime.date.today() -  datetime.timedelta(days = 7 )
+	playing = Game.objects.filter(gamedate__range = [startDate, datetime.date.today()]).order_by('-gamedate')
 
 	return render(request, 'table/home.html', {'teams': teams, 'playing': playing})
 
 def fixtures(request):
-	numWeeks = 1
-	games = getFixtures(numWeeks,0)
+	games = getFixtures()
 	playingDates = games[0]
 	idDict = games[1]
 
@@ -42,18 +44,25 @@ def club(request, pk):
 
 	return render(request, 'table/club.html', {'club': club, 'team': team, 'gk' : gk, 'df': df, 'mf': mf, "fw": fw, 'flags': flags})
 
-
-
 def clubsView(request):
 	teams = Team.objects.all().order_by("name")
-
 	return render(request, 'table/clubList.html', {'teams': teams})
 
+def playersView(request):
+	players = Player.objects.all().order_by("name")
+	myFilter = PlayerFilter(request.GET, queryset = players)
+	players = myFilter.qs
+
+	return render(request, 'table/players.html', {'players': players, 'myFilter': myFilter})
+
+
+def autosuggest(request):
+	print(request.GET)
 
 
 def inputScores(request):
-	startDate = datetime.date.today() -  datetime.timedelta(days = 5)
-	endDate = datetime.date.today()
+	startDate = datetime.date.today() -  datetime.timedelta(days = 4)
+	endDate = datetime.date.today() -  datetime.timedelta(days = 1)
 	today = Game.objects.filter(gamedate__range = [startDate, endDate])
 
 	if today.exists():
@@ -99,7 +108,7 @@ def updateTable(startDate,endDate):
 			two.points = two.points + 3
 			one.curForm = "L" + one.curForm[:-1]
 			two.curForm = "W" + two.curForm[:-1]
-		else: 
+		elif int(game.teamtwogoals) ==  int(game.teamonegoals):
 			one.drawn = one.drawn + 1
 			two.drawn = two.drawn + 1
 			one.points = one.points + 1
@@ -110,10 +119,9 @@ def updateTable(startDate,endDate):
 		two.save()
 
 
-def getFixtures(numWeeks,prevDays):
-	startDate = datetime.date.today() -  datetime.timedelta(days = prevDays )
-	endDate = startDate + datetime.timedelta(days = 6 * numWeeks)
-	playing = Game.objects.filter(gamedate__range = [startDate,endDate]).order_by('gamedate')
+def getFixtures():
+	startDate = datetime.date.today()
+	playing = Game.objects.filter(Q(gamedate__gt= startDate)).order_by('gamedate')
 	playingDates = {}
 	itrDate = playing.first().gamedate
 

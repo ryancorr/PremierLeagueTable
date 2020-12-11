@@ -1,11 +1,6 @@
-
+{% load static %}
 <style>
 
-.wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-}
 
 .scoreboard-outer {
   display: flex;
@@ -13,7 +8,9 @@
   height: 40px;
   top:50px;
   left: 15%;
-  background-color: #53e2d4;
+  background-color:   #3a0640;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .team-name,
@@ -27,15 +24,15 @@
 .team-name {
   flex: 1;
   padding: 0px 8px;
-  color: white;
+  color: black;
   letter-spacing: 0.5px;
-  background-color: #311149;
+  background-color: #e9ecef;
 }
 
 .score-panel {
   flex: 1.2;
   font-weight: 900;
-  color: #44444;
+  color: white;
   text-align: center;
 }
 
@@ -44,23 +41,58 @@
 }
 
 
+.table{
+  border-right: solid 1px; 
+  border-left: solid 1px;
+  border-bottom: solid 1px;
+  border-color: #e9ecef;
+
+}
+
+#imgOne{
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin-top: 5px;
+}
+
+#imgTwo{
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin-top: 5px;
+}
+
+
 </style>
 
 
 
-<table class ='table w-75'>
-<tr>
-{% for i in playing %}
-	<th scope="col">
-		<div class="scoreboard-outer">
-			<span class="team-name one">{{i.teamone.abrev}}</span>
-			<div class="score-panel">
-				<span class="score team1">{{i.teamonegoals}}</span>
-				<span class="score team2">{{i.teamtwogoals}}</span>
-			</div>
-			<span class="team-name two">{{i.teamtwo.abrev}}</span>
-		</div>
-	</th>
-{% endfor %}
-</tr>
+<table class ='table w-75' id ="score" style=" margin-left: auto; margin-right: auto; ">
+  <thead class="thead-light">
+  <tr>
+    <th style="text-align: center"> <h4> Recent Results </h4></th>
+  </tr>
+  </thead>
+
+  <tbody>
+
+      {% for i in playing %}
+      <tr>
+        <td style="border-top: none; padding-bottom: 1px; "">
+          <div class="scoreboard-outer">
+          
+          
+           <span class="team-name one"> <img src ="{% get_static_prefix %}images/logos/{{i.teamone.id}}.png" id = "imgOne"> {{i.teamone.abrev}}</span>
+           <div class="score-panel">
+            <span class="score team1">{{i.teamonegoals}}</span>
+            <span class="score team2">{{i.teamtwogoals}}</span>
+          </div>
+          <span class="team-name two"> {{i.teamtwo.abrev}} <img src ="{% get_static_prefix %}images/logos/{{i.teamtwo.id}}.png" id = "imgTwo"> </span>
+          </div>
+        </td>
+      </tr>
+    {% endfor %}
+
+  </tbody>
 </table>

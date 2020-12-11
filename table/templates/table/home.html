@@ -10,14 +10,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <style>
 
-div{
-	text-align: center;
- }
 
-.table{
-	margin-left: auto;
-  	margin-right: auto;
-}
 
 </style>
 
@@ -25,16 +18,22 @@ div{
 </head>
 <body>
 	{% include 'table/navbar.html'%}
-	{% include 'table/scoreboard.html'%}
-
+	
 	<div>
 		<br>
-		<h1>Premier League Table</h1>
+		<h1 style="text-align: center">Premier League Table</h1>
 	</div>
 	<br>
-	
-	{% include 'table/table.html' %} 
 
+
+	<div> 
+		<table class="table" style="margin-left: auto; margin-right: auto; ">
+			<tr class = "d-flex" style="border: none">
+				<td class ='col-2'> {% include 'table/scoreboard.html'%} </td>
+				<td class ='col-10'> {% include 'table/table.html' %} </td>	
+			</tr>	
+		</table>
+	</div>
 </body>
 
 

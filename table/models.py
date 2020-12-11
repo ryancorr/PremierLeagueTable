@@ -45,13 +45,27 @@ class Game(models.Model):
 		return self.teamone.name + " v " + self.teamtwo.name + " - " + self.gamedate.strftime("%m/%d/%Y")
 
 
+
+
+
 class Player(models.Model):
+	positionChoices = (
+		('GK', 'Goal Keeper'),
+		('DF', 'Defender'),
+		('MF', 'Midfielder'),
+		('FW', 'Forward'),
+	)
+
+
+
+
 	club = models.ForeignKey(Club,null=True, on_delete = models.SET_NULL)
 	name =  models.CharField(max_length = 30, null = True)
 	number = models.IntegerField(null = True)
-	position = 	models.CharField(max_length = 10, null = True)
 	nation = models.CharField(max_length = 30, null = True)
 	picture = models.CharField(max_length = 200, null = True)
+	position = models.CharField(max_length = 10, choices = positionChoices, null=True)
+
 
 	def __str__(self):
 		return self.name
